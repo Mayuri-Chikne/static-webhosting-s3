@@ -2,7 +2,6 @@ pipeline {
     agent any
     stages {
         stage('deploy') {
-            withEnv(['PATH+EXTRA=/usr/sbin:/usr/bin:/sbin:/bin'])
             steps {
                 echo'nm'
                 sh 'aws s3 cp Code s3://mystaticwebsites3 --recursive'
